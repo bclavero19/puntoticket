@@ -5,8 +5,8 @@
   {
     // Constantes
     const VERSION = 4;
-    const EVENTO = 'biz175';
-    const NUM_FECHA = 2;
+    const EVENTO = 'biz188';
+    const NUM_FECHA = 3;
     const TIPO_TICKET_ID_MIN = 10;
     const TIPO_TICKET_ID_MAX = 12;
     const BASE_FETCH_PARAMS = {
@@ -66,7 +66,7 @@
     document.body.innerHTML = '';
 
     // Iniciar
-    await mostrarMensaje('Iniciando Mala Queue versión ' + VERSION);
+    await mostrarMensaje('Iniciando Mala Queue versión BC5' + VERSION);
 
     // Obtener ubicaciones disponibles
     const response1 = await fetch("/Compra/TraerTipoTicketsSectores", {
@@ -101,7 +101,7 @@
 
     // Confirmar cantidad
     const jcCantidadTickets = await seleccionar(
-      'Cantidad de entradas', [1, 2],
+      'Cantidad de entradas', [1, 2, 3, 4],
       x => x.toString(),
       x => x.toString());
     console.log({ jcTipoTicket, jcCantidadTickets });
